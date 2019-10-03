@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <input type="text" class="form-control" [(ngModel)]="username">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="alert alert-info">
+                <p>{{ username }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-2">
+            <button class="btn btn-primary"
+            [disabled]="username === undefined || username === ''"
+            (click)="onResetUsername()">Reset Username</button>
+        </div>
+    </div>
+</div>
